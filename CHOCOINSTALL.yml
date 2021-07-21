@@ -1,9 +1,8 @@
 ---
-- name: Install Choco
+- name: Install Chocolatey
   hosts: all
   tasks:
-    
-    win_chocolatey:
-      name:
-       - chocolatey-core.extension
-      state: present
+    - name: Install package
+      win_chocolatey:
+        name:
+          - chocolatey-core.extension
