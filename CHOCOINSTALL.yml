@@ -1,8 +1,8 @@
 ---
-- name: Install Chocolatey
+  name: Install Chocolatey
   hosts: all
   tasks:
-    - name: Install package
+      name: Install package
       win_chocolatey:
         name:
           - chocolatey-core.extension
