@@ -3,19 +3,17 @@
   hosts: all
   tasks:
     - name: Install chocolatey
-      win_chocolatey:
+        win_chocolatey:
           name:
            - chocolatey
            - chocolatey-core.extension
           state: present
-          
     - name: Add new internal source
-      win_chocolatey_source:
+        win_chocolatey_source:
         name: PROD
         state: present
         source: \\192.168.88.50\packages-final
-        
     - name: Remove the default public source
-      win_chocolatey_source:
+        win_chocolatey_source:
         name: chocolatey
         state: absent
