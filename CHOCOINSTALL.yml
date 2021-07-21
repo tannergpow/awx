@@ -5,6 +5,5 @@
   tasks:
   - name: Install package
       win_chocolatey:
-        name:
-         - chocolatey-core.extension
+        name: chocolatey-core.extension
         state: present
