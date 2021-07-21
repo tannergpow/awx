@@ -4,6 +4,6 @@
   gather_facts: true
   tasks:
   - name: Install package
-      win_chocolatey:
-        name: chocolatey
-        state: present
+    win_chocolatey:
+      name: chocolatey
+      state: present
