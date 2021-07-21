@@ -1,10 +1,10 @@
 ---
 - name: Install Chocolatey
   hosts: all
-  gather_facts: false
-
+  gather_facts: true
   tasks:
-    - name: Install package
+  - name: Install package
       win_chocolatey:
         name:
          - chocolatey-core.extension
+        state: present
