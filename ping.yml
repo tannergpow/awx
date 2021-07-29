@@ -1,8 +1,11 @@
 ---
-# This playbook uses the win_ping module to test connectivity to Windows hosts
-- name: Ping 
+- name: Ping and uninstall maya
   hosts: all 
 
   tasks:
   - name: ping
     win_ping:
+  - name: uninstall maya via choco uninstall
+    win_chocolatey:
+      name: maya
+      state: absent
