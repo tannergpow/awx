@@ -9,4 +9,5 @@
   - name: disable print spooler
     win_service:
       name: spooler
-      state: disabled
+      state: stopped
+      start_mode: disabled
