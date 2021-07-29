@@ -1,11 +1,9 @@
 ---
-- name: Ping and uninstall maya
+- name: Uninstall maya
   hosts: all 
 
   tasks:
-  - name: ping
-    win_ping:
-  - name: uninstall maya via choco uninstall
-    win_chocolatey:
+  - name: choco test uninstall
+    chocolatey.chocolatey.win_chocolatey:
       name: maya
       state: absent
