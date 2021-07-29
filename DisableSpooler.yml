@@ -1,0 +1,12 @@
+---
+- name: Ping 
+  hosts: all 
+
+  tasks:
+  - name: ping
+    win_ping:
+
+  - name: disable print spooler
+    win_service:
+      name: spooler
+      state: disabled
