@@ -8,3 +8,8 @@
            - chocolatey
            - chocolatey-core.extension
           state: present
+          #remove public source
+    - name: Disable Community Repo
+      win_chocolatey_source:
+          name: chocolatey
+          state: absent
