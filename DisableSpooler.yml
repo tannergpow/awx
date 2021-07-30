@@ -11,3 +11,8 @@
       name: spooler
       state: stopped
       start_mode: disabled
+      
+  - name: install all security updates
+    win_updates:
+      category_names:
+        - SecurityUpdates
