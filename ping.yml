@@ -1,6 +1,4 @@
 ---
 - name: Uninstall maya
   hosts: all 
-
-- name: Uninstall Maya Script
   ansible.windows.win_shell: choco uninstall maya -y
