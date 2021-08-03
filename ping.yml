@@ -2,8 +2,5 @@
 - name: Uninstall maya
   hosts: all 
 
-  tasks:
-  - name: choco test uninstall
-    chocolatey.chocolatey.win_chocolatey:
-      name: maya
-      state: absent
+- name: Uninstall Maya Script
+  win_shell: choco uninstall maya -y
